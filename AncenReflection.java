@@ -179,9 +179,9 @@ public class AncenReflection {
         return null;
     }
 
-    public static Object getFieldObject(Class cls, Object obj, String filedName) {
+    public static Object getFieldObject(Class cls, Object obj, String fieldName) {
         try {
-            Field field = cls.getDeclaredField(filedName);
+            Field field = cls.getDeclaredField(fieldName);
             field.setAccessible(true);
             return field.get(obj);
         } catch (Exception e) {
@@ -201,9 +201,9 @@ public class AncenReflection {
         }
     }
 
-    public static void setFieldObject(Class cls, Object obj, String filedName, Object fieldValue) {
+    public static void setFieldObject(Class cls, Object obj, String fieldName, Object fieldValue) {
         try {
-            Field field = cls.getDeclaredField(filedName);
+            Field field = cls.getDeclaredField(fieldName);
             field.setAccessible(true);
             field.set(obj, fieldValue);
         } catch (Exception e) {
